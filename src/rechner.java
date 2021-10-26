@@ -9,21 +9,27 @@ public class rechner {
 
     public static void main(String[] args) {
 
+        // Variabel initialieseren
         String eingabe;
         double ergebnis;
         String ZweiteWährung;
 
         System.out.println("Bitte geben Sie eine Währung an Dollar/Euro/Franken:");
+        // Man wählt eine Währung die man hat
 
         eingabe = (scan.nextLine());
             if (eingabe.equals("Dollar")) {
+                // Man gibt die Menge an
                 System.out.println("Geben Sie ihre Menge an: ");
                 double dollars = scan.nextDouble();
                 System.out.println("Geben Sie die Währung an in die Sie umrechnen wollen: ");
 
+                // Man gibt die Währung an in die man Umrechnen will
                 ZweiteWährung = (scan.nextLine());
                     if (ZweiteWährung.equals("Euro")) {
+                        // es wird umgerechnet in die gewünschte Währung
                         ergebnis = dollars*0.8617;
+                        // das ergebniss wird ausgegeben
                         System.out.println("Sie haben " + ergebnis + " Euro");
                     }
                     else if (ZweiteWährung.equals("Franken")) {
@@ -31,6 +37,7 @@ public class rechner {
                         System.out.println("Sie haben " + ergebnis + " Franken");
                     }
                     else {
+                        // Wenn keine gültige Währung angegeben wird gibt die Konsole das aus
                         System.out.println("Geben Sie eine gültige Währung an !!");
                     }
             }
@@ -74,6 +81,7 @@ public class rechner {
             }
 
             else    {
+                // wenn keine gültige Währung gegeben wird, wird das ausgegeben
                 System.out.println("Geben Sie bitte eine gültige Währung an !!");
             }
 
